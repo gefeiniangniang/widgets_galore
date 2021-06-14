@@ -1,0 +1,27 @@
+name: at_tylers_demo
+description: A demo Flutter project to show off a few of the @platform's widgets
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  at_onboarding_flutter: ^1.0.0+4
+  modal_progress_hud: any
+  at_server_status: ^0.1.0+1
+  at_chat_flutter: ^1.0.2
+  at_demo_data: ^0.0.3+1
+  cupertino_icons: ^1.0.2
+  at_contacts_flutter: ^1.0.0
+  at_location_flutter: ^1.0.3
+  at_events_flutter: ^1.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
