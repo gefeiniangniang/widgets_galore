@@ -1,28 +1,32 @@
-import 'package:at_tylers_demo/screens/ChatWithAtsign.dart';
-import 'package:at_tylers_demo/screens/ChatsScreen.dart';
-import 'package:at_tylers_demo/screens/mainMenu.dart';
-import 'package:at_tylers_demo/screens/onboarding.dart';
 import 'package:flutter/material.dart';
+import 'package:signal_main/home/home_screen.dart';
+import 'package:signal_main/login/onboarding_screen.dart';
+import 'package:signal_main/login/signin.dart';
+import 'package:signal_main/login/splash.dart';
+
+//import 'package:flutter/services.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(new MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: '@Protocol Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.deepOrange,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
+      title: 'Flutter Signal UI',
+      debugShowCheckedModeBanner: false,
+      theme: new ThemeData(
+        primaryColor: Colors.grey,
+        //canvasColor: Colors.grey,
       ),
-      initialRoute: OnboardingScreen.id,
+      initialRoute: LoginPage.id,
       routes: {
+        LoginPage.id: (context) => LoginPage(),
         OnboardingScreen.id: (context) => OnboardingScreen(),
-        MainMenu.id: (context) => MainMenu(),
-        ChatsScreen.id: (context) => ChatsScreen(),
-        ChatWithAtsign.id: (context) => ChatWithAtsign(),
+        HomeScreen.id: (context) => HomeScreen(),
+        SplashScreen.id: (context) => SplashScreen(),
       },
     );
   }
